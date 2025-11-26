@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/train_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Train Name and Number -->
+        <TextView
+            android:id="@+id/train_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Argo Bromo Anggrek" />
+
+        <TextView
+            android:id="@+id/train_number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorSecondary"
+            app:layout_constraintBottom_toBottomOf="@+id/train_name_text"
+            app:layout_constraintStart_toEndOf="@+id/train_name_text"
+            app:layout_constraintTop_toTopOf="@+id/train_name_text"
+            tools:text="(AK-123)" />
+
+        <TextView
+            android:id="@+id/train_class_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/rounded_background"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/train_name_text"
+            tools:backgroundTint="?attr/colorPrimary"
+            tools:text="Executive" />
+
+        <!-- Time and Duration -->
+        <TextView
+            android:id="@+id/departure_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/train_class_text"
+            tools:text="07:00" />
+
+        <ImageView
+            android:id="@+id/icon_time"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_train_line_24"
+            app:layout_constraintBottom_toBottomOf="@+id/departure_time_text"
+            app:layout_constraintStart_toEndOf="@+id/departure_time_text"
+            app:layout_constraintTop_toTopOf="@+id/departure_time_text"
+            app:tint="?attr/colorSecondary"
+            android:contentDescription="@string/train_route_icon" /> <!-- This line needs the string resource! -->
+
+        <TextView
+            android:id="@+id/duration_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="?attr/colorSecondary"
+            app:layout_constraintBottom_toTopOf="@+id/icon_time"
+            app:layout_constraintEnd_toEndOf="@+id/icon_time"
+            app:layout_constraintStart_toStartOf="@+id/icon_time"
+            tools:text="7h 30m" />
+
+
+        <TextView
+            android:id="@+id/arrival_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/icon_time"
+            app:layout_constraintTop_toTopOf="@+id/departure_time_text"
+            tools:text="14:30" />
+
+        <!-- Facilities and Seats -->
+        <TextView
+            android:id="@+id/facilities_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="12sp"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintEnd_toStartOf="@+id/available_seats_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/departure_time_text"
+            app:layout_constraintWidth_percent="0.6"
+            tools:text="AC, Reclining Seat, Power Outlet" />
+
+        <TextView
+            android:id="@+id/available_seats_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorError"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/facilities_text"
+            tools:text="45 seats left" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/material_dynamic_neutral90"
+            app:layout_constraintTop_toBottomOf="@+id/facilities_text" />
+
+        <!-- Price and Select Button -->
+        <TextView
+            android:id="@+id/price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            tools:text="Rp 350.000,00" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/select_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/price_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/price_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

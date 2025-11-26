@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Removed unused guideline to simplify layout -->
+
+        <TextView
+            android:id="@+id/text_train_name_class"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/text_train_price"
+            android:layout_marginEnd="8dp"
+            tools:text="KA Bima (Eksekutif)" />
+
+        <TextView
+            android:id="@+id/text_train_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Rp 930.000" />
+
+        <TextView
+            android:id="@+id/text_departure_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_train_name_class"
+            tools:text="17:30" />
+
+        <TextView
+            android:id="@+id/text_departure_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_departure_time"
+            tools:text="GMR" />
+
+        <TextView
+            android:id="@+id/text_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toEndOf="@id/text_departure_time"
+            app:layout_constraintEnd_toStartOf="@id/text_arrival_time"
+            app:layout_constraintTop_toTopOf="@id/text_departure_time"
+            app:layout_constraintBottom_toBottomOf="@id/text_departure_station"
+            android:gravity="center_vertical"
+            android:drawablePadding="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            tools:text="09h 00m" />
+
+        <TextView
+            android:id="@+id/text_arrival_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toStartOf="@id/btn_select_train"
+            app:layout_constraintTop_toTopOf="@id/text_departure_time"
+            tools:text="02:30"
+            android:layout_marginEnd="16dp"
+            />
+
+        <TextView
+            android:id="@+id/text_arrival_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toStartOf="@id/btn_select_train"
+            app:layout_constraintTop_toBottomOf="@id/text_arrival_time"
+            tools:text="BD"
+            android:layout_marginEnd="16dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_select_train"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SELECT"
+            android:textSize="14sp"
+            android:paddingHorizontal="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_train_price"
+            app:backgroundTint="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_marginTop="8dp"
+            tools:text="SELECT"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
