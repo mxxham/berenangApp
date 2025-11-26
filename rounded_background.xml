@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="6dp" />
+    <!-- A solid color is required for the shape, but it will be overridden
+         by the backgroundTint="?attr/colorPrimary" in item_train.xml -->
+    <solid android:color="@color/material_dynamic_primary0" />
+</shape>

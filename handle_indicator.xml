@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Set a solid color directly (using the default #999999) -->
+    <solid android:color="#999999" />
+    <corners android:radius="2dp" />
+    <!-- The size can be omitted if set in the layout, but keeping it here as backup/default -->
+    <size
+        android:width="40dp"
+        android:height="4dp" />
+</shape>
